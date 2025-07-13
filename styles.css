@@ -1,0 +1,227 @@
+:root {
+  --primary-color: #004C99;
+  --accent-color: #F5A623;
+  --font-sans: 'Segoe UI', Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-sans);
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
+}
+.site-header {
+  background: var(--primary-color);
+  color: #fff;
+}
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.main-nav ul li a {
+  color: #fff;
+  padding: 0.5rem;
+}
+.main-nav ul li a.active {
+  border-bottom: 2px solid var(--accent-color);
+}
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+}
+.slider-container {
+  height: 100%;
+  position: relative;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+.slide-caption {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+.slide-caption h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.slide-caption p {
+  font-size: 1.2rem;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.6);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.slider-btn.prev { left: 1rem; }
+.slider-btn.next { right: 1rem; }
+
+.services-overview, .testimonials-preview, .page-intro, .our-mission, .our-team, .service-list, .booking-form, .testimonials-list, .contact-details, .contact-map, .blog-list {
+  padding: 3rem 0;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+  display: inline-block;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+.btn-secondary {
+  display: inline-block;
+  background: #eee;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.testimonials-preview blockquote {
+  font-style: italic;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+.testimonials-preview cite {
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+  font-weight: bold;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.team-member {
+  text-align: center;
+}
+.team-member img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.booking-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+}
+.booking-form textarea {
+  min-height: 120px;
+}
+.booking-form button {
+  grid-column: 1 / -1;
+  width: fit-content;
+}
+.testimonials-list .testimonial {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent-color);
+}
+.blog-post {
+  margin-bottom: 1.5rem;
+}
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    display: none;
+  }
+  .main-nav ul.visible {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .slide-caption {
+    bottom: 10%;
+    padding: 0.5rem 1rem;
+  }
+  .slide-caption h1 {
+    font-size: 1.5rem;
+  }
+  .slide-caption p {
+    font-size: 1rem;
+  }
+  .booking-form form {
+    grid-template-columns: 1fr;
+  }
+}

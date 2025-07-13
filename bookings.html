@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookings – RwandaTravelPro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">RwandaTravelPro</a>
+      <button class="nav-toggle">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="bookings.html" class="active">Bookings</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h1>Book Your Trip</h1>
+      <p>Fill out the form below and we’ll help you get started with your journey.</p>
+    </section>
+
+    <section class="booking-form">
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <label>Name*<input type="text" name="name" required /></label>
+        <label>Email*<input type="email" name="email" required /></label>
+        <label>Phone Number<input type="tel" name="phone" /></label>
+        <label>Destination*<input type="text" name="destination" required /></label>
+        <label>Departure Date*<input type="date" name="departure" required /></label>
+        <label>Return Date<input type="date" name="return" /></label>
+        <label>Additional Notes<textarea name="message" required></textarea></label>
+        <button type="submit" class="btn-primary">Submit Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 RwandaTravelPro • Kigali, Rwanda • <a href="contact.html">Contact Us</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
